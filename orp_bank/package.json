@@ -1,0 +1,23 @@
+{
+	"author": "llnd",
+	"version": "1.0",
+
+	"client_scripts": [
+		"client/cl_main.lua"
+	],
+	
+	"server_scripts": [
+		"utils/json.lua",
+		"server/sv_main.lua"
+	],
+
+	"files": [
+		"gui/fontawesome.js",
+		"gui/jquery-ui.js",
+		"gui/jquery.js",
+
+		"gui/index.html",
+		"gui/style.css",
+		"gui/ui.js"
+	]
+}
