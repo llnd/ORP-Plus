@@ -1,6 +1,7 @@
 # O:RP++
  llnd's enhanced version of DimmiesTV's open source framework, Onset Roleplay.
 
+**Make sure you update the database.lua lines 14-17 according to your MySQL settings
 
 
 
