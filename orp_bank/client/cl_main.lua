@@ -25,6 +25,16 @@ function withdraw(amnt)
 end
 AddRemoteEvent("withdraw", withdraw)
 
+function wire(amount)
+    local cDist = GetNearestATM()
+    if cDist <= 250 then
+        CallRemoteEvent("wire", amount)
+    else
+        AddPlayerChat("You aren't at an ATM")
+    end
+end
+AddRemoteEvent("wire", wire)
+
 function deposit(amnt)
     local cDist = GetNearestATM()
     if cDist <= 250 then

@@ -19,6 +19,20 @@ AddCommand("deposit", function(player, amnt)
     CallRemoteEvent(player, "deposit", amnt)
 end)
 
+function pay(player, player2, amount)
+    if amount == null or player2 == null then
+        AddPlayerChat(player, "Syntax incorrect! Use /pay <receivingid> <amount>")
+    else
+        ORP.pay(player, player2, amount)
+        AddPlayerChat(player, "You have paid " ..GetPlayerName(player2).." $" ..amount.. " in cash.")
+    end
+end
+
+AddCommand("pay", pay)
+
+
+
+
 --------------------------GIVING & RECEIVING PAYOUT-------------------------
 function cfmdeposit(player, amnt)
     ORP.deposit(player, amnt)
@@ -30,4 +44,15 @@ function cfmwithdraw(player, amnt)
     ORP.withdraw(player, amnt)
 end
 AddRemoteEvent("cfmwithdraw", cfmwithdraw)
+
+function wire(player, player2, amount)
+    if amount == null or player2 == null then
+        AddPlayerChat(player, "Syntax incorrect! Use /pay <receivingid> <amount>")
+    else
+        ORP.wire(player, player2, amount)
+        AddPlayerChat(player, "You have paid " ..GetPlayerName(player2).." $" ..amount.. " via bank wire transfer.")
+    end
+end
+
+AddCommand("wire", wire)
 ----------------------------------------------------------------------------
