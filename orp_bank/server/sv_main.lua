@@ -46,7 +46,7 @@ end
 AddRemoteEvent("cfmwithdraw", cfmwithdraw)
 
 function wire(player, player2, amount)
-    if amount == null or player2 == null then
+	if amount == nil or tonumber(amount) > ORP.GetPlayerBank(player) or IsValidPlayer(player2) == false then
         AddPlayerChat(player, "Syntax incorrect! Use /pay <receivingid> <amount>")
     else
         ORP.wire(player, player2, amount)

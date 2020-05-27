@@ -176,7 +176,7 @@ end
 AddFunctionExport("withdraw", withdraw)
 
 function pay(player, player2, amount)
-	if amount == nil or amount > GetPlayerCash(player) or IsValidPlayer(player2) == false then
+	if amount == nil or tonumber(amount) > GetPlayerCash(player) or IsValidPlayer(player2) == false then
 		print("Not enough cash, player doesn't exist or invalid Usage : /pay <receiver's id> <amount>")
 	else
 		PlayerData[tonumber(player)].cash = PlayerData[tonumber(player)].cash - amount
@@ -188,7 +188,7 @@ end
 AddFunctionExport("pay", pay)
 
 function transaction(player, amount)
-	if amount == nil or amount > GetPlayerCash(player) then
+	if amount == nil or tonumber(amount) > GetPlayerCash(player) then
 		AddPlayerChat(player, "You do not have enough money to buy this.")
 	else
 		PlayerData[tonumber(player)].cash = PlayerData[tonumber(player)].cash - amount
@@ -198,8 +198,8 @@ end
 AddFunctionExport("transaction", transaction)
 
 function wire(player, player2, amount)
-	if amount == nil or amount > GetPlayerBank(player) or IsValidPlayer(player2) == false then
-		print("Not enough bank funds, player doesn't exist or invalid Usage : /wire <receiver's id> <amount>")
+	if amount == nil or tonumber(amount) > GetPlayerBank(player) or IsValidPlayer(player2) == false then
+		AddPlayerChat(player, "Not enough bank funds, player doesn't exist or invalid Usage : /wire <receiver's id> <amount>")
 	else
 		PlayerData[tonumber(player)].bank = PlayerData[tonumber(player)].bank - amount
 		PlayerData[tonumber(player2)].bank = PlayerData[tonumber(player2)].bank + amount
