@@ -18,7 +18,7 @@
 		"server/sv_main.lua",
 		"server/sv_commands.lua",
 		"server/sv_locations.lua",
-
+		"server/sv_exports.lua",
 		"langs/localization.lua",
 		"langs/en.lua"
 	],
