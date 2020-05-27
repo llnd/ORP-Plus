@@ -19,16 +19,17 @@ ORP = Importpackage("orp")
 ```
 ## Exports
 ```
-ORP.withdraw(player, amount)
-ORP.deposit(player, amount)
+ORP.Withdraw(player, amount)
+ORP.Deposit(player, amount)
 ORP.GetPlayerJob(player)
 ORP.GetPlayerJoblvl(player)
+ORP.SetJob(player, job, jobrank)
 ORP.GetPlayerCash(player)
 ORP.GetPlayerBank(player)
 ORP.GetPlayerDirtyMoney(player)
-ORP.wire(player, player2, amount)
-ORP.pay(player, player2, amount)
-ORP.transaction(player, amount)
+ORP.Wire(player, player2, amount)
+ORP.Pay(player, player2, amount)
+ORP.Transaction(player, amount)
 ```
 
 ## Example
