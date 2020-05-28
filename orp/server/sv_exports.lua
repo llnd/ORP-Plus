@@ -95,7 +95,7 @@ function Transaction(player, amount)
 end
 AddFunctionExport("Transaction", Transaction)
 
-function GetNearestPlayer(player)
+function GetClosePlayer(player)
     local plys = GetAllPlayers()
     local x, y, z = GetPlayerLocation(player)
     local rPlayer = nil
@@ -112,4 +112,4 @@ function GetNearestPlayer(player)
     end
     return rPlayer, cDist
 end
-AddFunctionExport("GetNearestPlayer", GetNearestPlayer)
+AddFunctionExport("GetClosePlayer", GetClosePlayer)
