@@ -94,3 +94,22 @@ function Transaction(player, amount)
 	end
 end
 AddFunctionExport("Transaction", Transaction)
+
+function GetNearestPlayer(player)
+    local plys = GetAllPlayers()
+    local x, y, z = GetPlayerLocation(player)
+    local rPlayer = nil
+    local cDist = 500
+    for k,v in pairs(plys) do
+        if v ~= player and IsValidPlayer(v) then
+            pX, pY, pZ = GetPlayerLocation(v)
+            local dist = GetDistance3D(x, y, z, pX, pY, pZ)
+            if dist < cDist then
+                rPlayer = v
+                cDist = dist
+            end
+        end
+    end
+    return rPlayer, cDist
+end
+AddFunctionExport("GetNearestPlayer", GetNearestPlayer)

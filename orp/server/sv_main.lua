@@ -2,9 +2,9 @@ ORP = ImportPackage("orp")
 
 AddEvent("OnPackageStart", function()
 	print("")
-	print("-------------------------------")
-	print("O:RP - Made by Dimmies | v" .. ORP_VERSION)
-	print("-------------------------------")
+	print("-------------------------------------------------------------")
+	print("O:RP - Base by Dimmies - Extended by llnd | v" ..  ORP_VERSION)
+	print("-------------------------------------------------------------")
 	print("")
 
 	if AUTO_START_PACKAGES == true then

@@ -7,7 +7,7 @@
 ORP_VERSION = "1.0.0" -- Don't change this
 DEBUG_MODE = true -- Enable this for additional logging to help debug any issues
 
-SERVER_NAME = "O:RP Server" -- Change this to your server name
+SERVER_NAME = "O:RP++ Server" -- Change this to your server name
 ENABLE_WHITELIST = false -- Set this to true to enable whitelisting
 SERVER_LANGUAGE = "en" -- Used to detirmine what language to use
 
