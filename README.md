@@ -30,7 +30,7 @@ ORP.GetPlayerDirtyMoney(player)
 ORP.Wire(player, player2, amount)
 ORP.Pay(player, player2, amount)
 ORP.Transaction(player, amount)
-ORP.GetNearestPlayer(player)
+ORP.GetClosePlayer(player)
 ```
 
 ## Example
